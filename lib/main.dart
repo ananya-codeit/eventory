@@ -5,6 +5,7 @@ import 'signup.dart';
 import 'signup1.dart';
 import 'societylogin.dart';
 import 'homescreen.dart';
+import 'societywelcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         SignUpScreen.id:(context)=>SignUpScreen(),
         SocietySignUP.id:(context)=>SocietySignUP(),
         HomeScreen.id:(context)=>HomeScreen(),
+        SocietyWelcome.id:(context)=>SocietyWelcome(),
       },
     );
   }
