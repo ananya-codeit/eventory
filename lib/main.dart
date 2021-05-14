@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
 import 'login.dart';
 import 'signup.dart';
-import 'package:rename/rename.dart';
 import 'signup1.dart';
+import 'societylogin.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.id:(context)=>LoginScreen(),
         SignUp.id:(context)=>SignUp(),
         SignUpScreen.id:(context)=>SignUpScreen(),
+        SocietySignUP.id:(context)=>SocietySignUP(),
       },
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'signup.dart';
+import 'societylogin.dart';
 class SignUpScreen extends StatefulWidget {
   static String id ='sign_up_screen';
   @override
@@ -69,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 padding: const EdgeInsets.symmetric(vertical:10,horizontal:10),
                 child: GestureDetector(
                   onTap: (){
-                    print('yes');
+                    Navigator.pushNamed(context, SocietySignUP.id);
                   },
                   child: Container(
                     height: 50,

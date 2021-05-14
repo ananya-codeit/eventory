@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class SignUp extends StatefulWidget {
-  static String id ='sign_up';
+class SocietySignUP extends StatefulWidget {
+  static String id ='society_sign_up';
   @override
-  _SignUpState createState() => _SignUpState();
+  _SocietySignUPState createState() => _SocietySignUPState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _SocietySignUPState extends State<SocietySignUP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +47,7 @@ class _SignUpState extends State<SignUp> {
                 cursorHeight: 25.0,
                 decoration: InputDecoration(
 
-                  hintText: 'Name',
+                  hintText: 'Name of the Society',
                   hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey.shade100),
 
                   contentPadding:
@@ -79,7 +79,7 @@ class _SignUpState extends State<SignUp> {
                 cursorHeight: 25.0,
                 decoration: InputDecoration(
 
-                  hintText: 'Email',
+                  hintText: 'Email of the Society',
                   hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey.shade100),
 
                   contentPadding:
@@ -239,3 +239,4 @@ class _SignUpState extends State<SignUp> {
     );
   }
 }
+
