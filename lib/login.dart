@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'homescreen.dart';
 class LoginScreen extends StatefulWidget {
   static String id ='login_screen';
   @override
@@ -118,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: (){
-                  print('yes');
+                  Navigator.pushNamed(context, HomeScreen.id);
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 5),
