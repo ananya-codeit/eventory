@@ -50,13 +50,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Center(
                     child: Column(
                       children: [
-                        Text(
-                          'Hackowasp',
-                          style: GoogleFonts.pattaya(
-                            color: Colors.black,
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal:48),
+                              child: Text(
+                                'Hackowasp',
+                                style: GoogleFonts.pattaya(
+                                  color: Colors.black,
+                                  fontSize: 40.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap:(){
+                                print('yes');
+                              },
+                              child: Icon(
+                                Icons.favorite,
+                                color: Colors.white,
+                                size: 40.0,
+                              ),
+                            ),
+                          ],
                         ),
                         Text(
                           'Category:Technical',
@@ -108,13 +125,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Center(
                     child: Column(
                       children: [
-                        Text(
-                          'Theta',
-                          style: GoogleFonts.pattaya(
-                            color: Colors.black,
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal:98.0),
+                              child: Text(
+                                'Theta',
+                                style: GoogleFonts.pattaya(
+                                  color: Colors.black,
+                                  fontSize: 40.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap:(){
+                                print('yes');
+                              },
+                              child: Icon(
+                                Icons.favorite,
+                                color: Colors.white,
+                                size: 40.0,
+                              ),
+                            ),
+                          ],
                         ),
                         Text(
                           'Category:Technical',
@@ -166,13 +200,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Center(
                     child: Column(
                       children: [
-                        Text(
-                          'Dare2Dance',
-                          style: GoogleFonts.pattaya(
-                            color: Colors.black,
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(48, 0, 40, 0),
+                              child: Text(
+                                'Dare2Dance',
+                                style: GoogleFonts.pattaya(
+                                  color: Colors.black,
+                                  fontSize: 40.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap:(){
+                                print('yes');
+                              },
+                              child: Icon(
+                                Icons.favorite,
+                                color: Colors.white,
+                                size: 40.0,
+                              ),
+                            ),
+                          ],
                         ),
                         Text(
                           'Category:Dance',
