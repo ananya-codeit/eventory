@@ -11,13 +11,282 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Container(
+        child:Column(
+          children:[
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 35.0),
+                child: Center(
+                  child: Text(
+                    'Eventory',
+                    style: TextStyle(
+                      fontFamily: 'Mystical Snow',
+                      color: Colors.white,
+                      fontSize: 60.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height:30.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
+              child: GestureDetector(
+                onTap: (){
+                  print('yes');
+                },
+                child: Container(
+
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF19A1FB),
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text(
+                          'Hackowasp',
+                          style: GoogleFonts.pattaya(
+                            color: Colors.black,
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          'Category:Technical',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        Text(
+                          'Society:Owasp',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        Text(
+                          'Date: 20-21 May2021',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
+              child: GestureDetector(
+                onTap: (){
+                  print('yes');
+                },
+                child: Container(
+
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF19A1FB),
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text(
+                          'Theta',
+                          style: GoogleFonts.pattaya(
+                            color: Colors.black,
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          'Category:Technical',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        Text(
+                          'Society:Owasp',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        Text(
+                          'Date: 20-21 June 2021',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
+              child: GestureDetector(
+                onTap: (){
+                  print('yes');
+                },
+                child: Container(
+
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF19A1FB),
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text(
+                          'Dare2Dance',
+                          style: GoogleFonts.pattaya(
+                            color: Colors.black,
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          'Category:Dance',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        Text(
+                          'Society:Mudra',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        Text(
+                          'Date: 25-27 June 2021',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+
+                ),
+              ),
+            ),
+            SizedBox(
+              height:65.0,
+            ),
+            Container(
+              child:Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap:(){
+                    print('yes');
+                    },
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
+                  ),
+                  GestureDetector(
+                        onTap:(){
+                        print('yes');
+                        },
+                    child: Icon(
+                      Icons.list,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
+                  ),
+                  GestureDetector(
+                      onTap:(){
+                      print('yes');
+                      },
+                        child: Icon(
+                      Icons.home,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
+                  ),
+                  GestureDetector(
+                           onTap:(){
+                       print('yes');
+                      },
+                    child: Icon(
+                      Icons.favorite,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap:(){
+                      print('yes');
+                    },
+                    child: Icon(
+                      Icons.account_circle_outlined,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
+                  ),
+                ],
+              ),
+              height:70,
+              width:double.infinity,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      Color(0xFF56E3D8),
+                      Color(0xFF139CFF),
+                    ],
+                  ),
+              ),
+            ),
+          ],
+        ),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/background.png'),
+            image: AssetImage('images/bg.png'),
             fit: BoxFit.cover,
-          )
+          ),
         ),
-      )
+      ),
     );
   }
 }
