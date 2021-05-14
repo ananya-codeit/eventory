@@ -41,9 +41,9 @@ class _SocietyWelcomeState extends State<SocietyWelcome> {
                 ),
               ),
             ),
-            Image(image: AssetImage('images/s1.png'),),
+            Image(image: AssetImage('images/society.png'),),
             SizedBox(
-              height:30,
+              height:60,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical:10,horizontal:10),
