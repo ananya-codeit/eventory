@@ -168,40 +168,6 @@ class _SocietySignUPState extends State<SocietySignUP> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
-              child: TextField(
-                onChanged: (value) {
-                  //Do something with the user input.
-                },
-                style: TextStyle(color: Colors.white),
-                cursorColor: Colors.deepOrangeAccent,
-                cursorHeight: 25.0,
-                obscureText: true,
-                obscuringCharacter: "*",
-                decoration: InputDecoration(
-
-                  hintText: 'Confirm Password',
-                  hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey.shade100),
-
-                  contentPadding:
-                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide:
-                    BorderSide(color: Colors.white, width: 1.0),
-                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide:
-                    BorderSide(color: Colors.white, width: 2.0),
-                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: (){
