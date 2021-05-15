@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'favourites.dart';
+import 'homescreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 class EventTapInfo extends StatefulWidget {
   static String id ='event_tap_info';
@@ -71,7 +73,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
                   ),
                   GestureDetector(
                     onTap:(){
-                      print('yes');
+                      Navigator.pushNamed(context, HomeScreen.id);
                     },
                     child: Icon(
                       Icons.home,
@@ -81,7 +83,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
                   ),
                   GestureDetector(
                     onTap:(){
-                      print('yes');
+                      Navigator.pushNamed(context, Favourites.id);
                     },
                     child: Icon(
                       Icons.favorite,

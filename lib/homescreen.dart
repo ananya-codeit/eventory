@@ -1,6 +1,7 @@
 import 'package:eventaholic/event_tap_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'favourites.dart';
 class HomeScreen extends StatefulWidget {
   static String id ='home_screen';
   @override
@@ -297,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   GestureDetector(
                            onTap:(){
-                       print('yes');
+                             Navigator.pushNamed(context, Favourites.id);
                       },
                     child: Icon(
                       Icons.favorite,
