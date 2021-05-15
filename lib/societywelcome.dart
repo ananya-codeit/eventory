@@ -80,7 +80,7 @@ class _SocietyWelcomeState extends State<SocietyWelcome> {
               padding: const EdgeInsets.symmetric(vertical:10,horizontal:10),
               child: GestureDetector(
                 onTap: (){
-                  print('yes');
+                  Navigator.pushNamed(context, EventDetails.id);
                 },
                 child: Container(
                   height: 50,
@@ -129,8 +129,6 @@ class _SocietyWelcomeState extends State<SocietyWelcome> {
                       ),
                     ),
                   ),
-
-
                 ),
               ),
             ),
@@ -143,40 +141,20 @@ class _SocietyWelcomeState extends State<SocietyWelcome> {
                 children: [
                   GestureDetector(
                     onTap:(){
-                      print('yes');
+                      Navigator.pushNamed(context, EventDetails.id);
                     },
                     child: Icon(
-                      Icons.search,
+                      Icons.add,
                       color: Colors.white,
                       size: 40.0,
                     ),
                   ),
                   GestureDetector(
                     onTap:(){
-                      print('yes');
-                    },
-                    child: Icon(
-                      Icons.list,
-                      color: Colors.white,
-                      size: 40.0,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap:(){
-                      print('yes');
+                      Navigator.pushNamed(context, SocietyWelcome.id);
                     },
                     child: Icon(
                       Icons.home,
-                      color: Colors.white,
-                      size: 40.0,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap:(){
-                      print('yes');
-                    },
-                    child: Icon(
-                      Icons.favorite,
                       color: Colors.white,
                       size: 40.0,
                     ),

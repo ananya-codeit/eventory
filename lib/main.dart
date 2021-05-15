@@ -9,6 +9,8 @@ import 'homescreen.dart';
 import 'societywelcome.dart';
 import 'splash_screen.dart';
 import 'event_details.dart';
+import 'event_details_two.dart';
+import 'event_details_three.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
         HomeScreen.id:(context)=>HomeScreen(),
         SocietyWelcome.id:(context)=>SocietyWelcome(),
         EventDetails.id:(context)=>EventDetails(),
+        EventDetailsTwo.id:(context)=>EventDetailsTwo(),
+        EventDetailsThree.id:(context)=>EventDetailsThree(),
       },
     );
   }
