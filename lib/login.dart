@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 class LoginScreen extends StatefulWidget {
   static String id ='login_screen';
   @override
@@ -9,6 +10,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,8 +42,9 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
+                textAlign:TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                 email=value;
                 },
 
                 cursorColor: Colors.deepOrangeAccent,
@@ -47,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
 
-                  hintText: 'Username',
+                  hintText: 'Email',
                   hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey.shade100),
 
                   contentPadding:
@@ -71,8 +76,9 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
+                textAlign:TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                  password=value;
                 },
                 style: TextStyle(color: Colors.white),
                 obscureText: true,
@@ -118,8 +124,17 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
-                onTap: (){
-                  Navigator.pushNamed(context, HomeScreen.id);
+                onTap: () async {
+                  try {
+                    final user = await _auth.signInWithEmailAndPassword(
+                        email: email, password: password);
+                    if (user != null) {
+                      Navigator.pushNamed(context, HomeScreen.id);
+                    }
+                  }
+                  catch(e){
+                    print(e);
+                  }
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 5),

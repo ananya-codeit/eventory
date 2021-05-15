@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal:98.0),
+                              padding: const EdgeInsets.symmetric(horizontal:94.0),
                               child: Text(
                                 'Theta',
                                 style: GoogleFonts.pattaya(

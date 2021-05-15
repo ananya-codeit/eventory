@@ -11,8 +11,13 @@ import 'splash_screen.dart';
 import 'event_details.dart';
 import 'event_details_two.dart';
 import 'event_details_three.dart';
-
-void main() {
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'dart:async';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  //await FirebaseAuth.instance.useEmulator('http://localhost:9099');
   runApp(MyApp());
 }
 
@@ -38,4 +43,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 

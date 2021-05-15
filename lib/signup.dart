@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 class SignUp extends StatefulWidget {
   static String id ='sign_up';
   @override
@@ -8,6 +9,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final _auth=FirebaseAuth.instance;
+  String name;
+  String password;
+  String email;
+  String phone;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,8 +47,9 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: TextField(
+                textAlign:TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                  name=value;
                 },
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.deepOrangeAccent,
@@ -72,9 +80,11 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
+                textAlign:TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                  email=value;
                 },
+                keyboardType: TextInputType.emailAddress,
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.deepOrangeAccent,
                 cursorHeight: 25.0,
@@ -104,8 +114,9 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
+                textAlign:TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                  phone=value;
                 },
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.deepOrangeAccent,
@@ -137,8 +148,9 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
+                textAlign:TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                  password=value;
                 },
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.deepOrangeAccent,
@@ -171,8 +183,16 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
-                onTap: (){
-                  Navigator.pushNamed(context, HomeScreen.id);
+                onTap: () async {
+                  try {
+                    print(email);
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    if(newUser!=null){
+                      Navigator.pushNamed(context, HomeScreen.id);
+                    }
+                  }catch(e){print(e);}
+
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 5),
