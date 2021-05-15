@@ -1,3 +1,4 @@
+import 'package:eventaholic/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
 import 'login.dart';
@@ -6,6 +7,7 @@ import 'signup1.dart';
 import 'societylogin.dart';
 import 'homescreen.dart';
 import 'societywelcome.dart';
+import 'splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: WelcomeScreen.id,
+      initialRoute: SplashScreen.id,
       routes: {
+        SplashScreen.id:(context)=>SplashScreen(),
         WelcomeScreen.id:(context)=>WelcomeScreen(),
         LoginScreen.id:(context)=>LoginScreen(),
         SignUp.id:(context)=>SignUp(),
