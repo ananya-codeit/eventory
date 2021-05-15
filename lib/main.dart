@@ -14,6 +14,7 @@ import 'event_details_three.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:async';
+import 'evenrt_tap_info.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         EventDetails.id:(context)=>EventDetails(),
         EventDetailsTwo.id:(context)=>EventDetailsTwo(),
         EventDetailsThree.id:(context)=>EventDetailsThree(),
+        EventTapInfo.id:(context)=>EventTapInfo(),
       },
     );
   }

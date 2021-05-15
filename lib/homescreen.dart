@@ -1,3 +1,4 @@
+import 'package:eventaholic/evenrt_tap_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class HomeScreen extends StatefulWidget {
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
               child: GestureDetector(
                 onTap: (){
-                  print('yes');
+                  Navigator.pushNamed(context, EventTapInfo.id);
                 },
                 child: Container(
 
