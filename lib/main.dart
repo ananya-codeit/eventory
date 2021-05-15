@@ -14,7 +14,7 @@ import 'event_details_three.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:async';
-import 'evenrt_tap_info.dart';
+import 'event_tap_info.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
