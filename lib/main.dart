@@ -8,6 +8,7 @@ import 'societylogin.dart';
 import 'homescreen.dart';
 import 'societywelcome.dart';
 import 'splash_screen.dart';
+import 'event_details.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         SocietySignUP.id:(context)=>SocietySignUP(),
         HomeScreen.id:(context)=>HomeScreen(),
         SocietyWelcome.id:(context)=>SocietyWelcome(),
+        EventDetails.id:(context)=>EventDetails(),
       },
     );
   }

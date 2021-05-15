@@ -1,5 +1,7 @@
+import 'package:eventaholic/event_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'event_details.dart';
 class SocietyWelcome extends StatefulWidget {
   static String id ='society_welcome';
   @override
@@ -43,13 +45,13 @@ class _SocietyWelcomeState extends State<SocietyWelcome> {
             ),
             Image(image: AssetImage('images/society.png'),),
             SizedBox(
-              height:60,
+              height:74,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical:10,horizontal:10),
               child: GestureDetector(
                 onTap: (){
-                  print('yes');
+                  Navigator.pushNamed(context, EventDetails.id);
                 },
                 child: Container(
                   height: 50,
