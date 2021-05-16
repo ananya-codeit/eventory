@@ -63,6 +63,6 @@ To view our UI/UX Design on Figma ,click [here](https://www.figma.com/file/seMw6
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/centralperk.png" /> 
 
 
-C.E.N.T.R.A.L.P.E.R.K is the team name as we had to stay on coffee to pull a lot of all nighters to finish the app. 
+C.E.N.T.R.A.L.P.E.R.K is the team name as we needed a constant supply of coffee to pull a lot of all-nighters to finish the app. 
 
 All five team members are college students. This is a app for the students by the students.
