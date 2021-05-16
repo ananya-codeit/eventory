@@ -14,16 +14,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  final _firestore= FirebaseFirestore.instance;
+  CollectionReference student = FirebaseFirestore.instance.collection('student');
   final _auth=FirebaseAuth.instance;
   String name;
   String password;
   String email;
   String phone;
-
-
-
-
 
 
   @override
@@ -195,21 +191,17 @@ class _SignUpState extends State<SignUp> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: () async {
+                  student.add({
+                    'email': email,
+                    'name': name,
+                    'password': password,
+                    'phone': phone,
+                  }).then((value)=>print(value)).catchError((error)=>print(error));
+
                   try {
-                    print(email);
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if(newUser!=null){
-
-_firestore.collection('student details').add({
-  'email': email,
-  'name': name,
-  'password': password,
-  'phone': phone,
-});
-
-
-
                       Navigator.pushNamed(context, HomeScreen.id);
 
                     }
