@@ -11,6 +11,12 @@ class EventDetails extends StatefulWidget {
 }
 
 class _EventDetailsState extends State<EventDetails> {
+  String society;
+  String event;
+  String category;
+
+
+
   DateTime selectedDate = DateTime.now();
 
   Future<void> _selectDate(BuildContext context) async {
@@ -79,7 +85,7 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                  society=value;
                 },
                 style: TextStyle(
                     color: Colors.black,
@@ -127,7 +133,7 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                  event=value;
                 },
                 style: TextStyle(
                   color: Colors.black,
@@ -285,7 +291,7 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                  category=value;
                 },
                 style: TextStyle(
                   color: Colors.black,
