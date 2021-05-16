@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
             Opacity(
                 opacity: 1.0,
-                child: Image.asset('images/app_icon.png')
+                //child: Image.asset('images/app_icon.png')
             ),
 
             Shimmer.fromColors(
@@ -59,13 +59,13 @@ class _SplashScreenState extends State<SplashScreen> {
               baseColor: Color(0xffeeecec),
               highlightColor: Color(0xff525050),
               child: Container(
-                padding: EdgeInsets.only(top: 410.0),
+                padding: EdgeInsets.only(top: 310.0,left:40),
                 child: Column(
                   children: [
                     Text(
                       "Eventory",
                       style: TextStyle(
-                          fontSize: 38.0,
+                          fontSize: 88.0,
                           fontFamily: 'Mystical Snow',
                           shadows: <Shadow>[
                             Shadow(
