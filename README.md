@@ -24,7 +24,7 @@ The uniqueness of the app lies in that fact that the user gets to see the events
 ## Splash Screen
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/splash_screen.png" height="550" />
 
-When the app is initially opened, you get a view of the splash screen sayin Eventory agross the screen.
+When the app is initially opened, you get a view of the splash screen saying Eventory agross the screen.
 
 ## Welcome Screen
 <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/welcome_screen.png" height ="550"/>
@@ -40,7 +40,7 @@ Now the next screen would be to login into your account. Simply type in your cre
 ## Society Home Screen
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/society_home_screen.png"   height="550" />
 
-if you have logged in as a society member you get the option to add a event, edit a event or delete a event.
+If you have logged in as a society member you get the option to add a event, edit a event or delete a event.
 
 ## Student Home Screen
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/student_home_screen.png"  height="550" />
