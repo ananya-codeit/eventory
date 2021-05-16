@@ -22,7 +22,7 @@ The uniqueness of the app lies in that fact that the user gets to see the events
 # How the App Works
 
 ## Splash Screen
-<img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/splash_screen2.png" height="550" />
+<img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/splash_screen.png" height="550" />
 
 When the app is initially opened, you get a view of the splash screen saying Eventory across the screen on top of our logo.
 
