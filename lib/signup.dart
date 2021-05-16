@@ -1,7 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 class SignUp extends StatefulWidget {
   static String id ='sign_up';
   @override
@@ -9,11 +14,17 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final _firestore= FirebaseFirestore.instance;
   final _auth=FirebaseAuth.instance;
   String name;
   String password;
   String email;
   String phone;
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -189,9 +200,21 @@ class _SignUpState extends State<SignUp> {
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if(newUser!=null){
+
+_firestore.collection('student details').add({
+  'email': email,
+  'name': name,
+  'password': password,
+  'phone': phone,
+});
+
+
+
                       Navigator.pushNamed(context, HomeScreen.id);
+
                     }
                   }catch(e){print(e);}
+
 
                 },
                 child: Container(
