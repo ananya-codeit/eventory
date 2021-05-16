@@ -55,6 +55,10 @@ The goal of the aim is to create a platform for users where they can be notified
 
 To view our UI/UX Design on Figma ,click [here](https://www.figma.com/file/seMw6uRyuXJuW6LPNoatvc/Eventory?node-id=0%3A1)
 
+# Landing Page
+
+To know more about our app, click [here](https://eventory1.netlify.app/)
+
 # Tech Stack Used
 
 <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/pngfind.com-dart-png-1441576.png" width="70"/>      <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/figma2.png" width="70" /> <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/file_type_flutter_icon_130599.png" width="70" />   <img align="center" src= "https://github.com/ananya-codeit/eventory/blob/master/images/firebase.png" width="70">
@@ -63,6 +67,6 @@ To view our UI/UX Design on Figma ,click [here](https://www.figma.com/file/seMw6
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/centralperk.png" /> 
 
 
-C.E.N.T.R.A.L. P.E.R.K is the team name as we needed a constant supply of coffee to pull a lot of all-nighters to finish the app. 
+C.E.N.T.R.A.L.P.E.R.K is the team name as we needed a constant supply of coffee to pull a lot of all-nighters to finish the app. 
 
 All five team members are college students. This is a app for the students by the students.
