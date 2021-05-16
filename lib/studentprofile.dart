@@ -59,6 +59,7 @@ class _StudentProfileState extends State<StudentProfile> {
                 onTap: (){
                   //Navigator.pushNamed(context, HomeScreen.id);
                   print('yes');
+
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 5),
