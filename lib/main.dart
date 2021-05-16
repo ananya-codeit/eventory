@@ -11,8 +11,6 @@ import 'homescreen.dart';
 import 'societywelcome.dart';
 import 'splash_screen.dart';
 import 'event_details.dart';
-import 'event_details_two.dart';
-import 'event_details_three.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:async';
@@ -22,6 +20,7 @@ import 'student_profile_view.dart';
 import 'studentprofile.dart';
 import 'societyprofileedit.dart';
 import 'societyprofileview.dart';
+import 'categories.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,14 +45,13 @@ class MyApp extends StatelessWidget {
         HomeScreen.id:(context)=>HomeScreen(),
         SocietyWelcome.id:(context)=>SocietyWelcome(),
         EventDetails.id:(context)=>EventDetails(),
-        EventDetailsTwo.id:(context)=>EventDetailsTwo(),
-        EventDetailsThree.id:(context)=>EventDetailsThree(),
         EventTapInfo.id:(context)=>EventTapInfo(),
         Favourites.id:(context)=>Favourites(),
         StudentProfileView.id:(context)=>StudentProfileView(),
         StudentProfile.id:(context)=>StudentProfile(),
         SocietyProfileEdit.id:(context)=>SocietyProfileEdit(),
         SocietyProfileView.id:(context)=>SocietyProfileView(),
+        Categories.id:(context)=>Categories(),
       },
     );
   }
