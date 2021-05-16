@@ -22,15 +22,15 @@ The uniqueness of the app lies in that fact that the user gets to see the events
 # How the App Works
 
 ## Splash Screen
-<img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/splash_screen.png" height="550" />
+<img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/splash_screen2.png" height="550" />
 
-When the app is initially opened, you get a view of the splash screen saying Eventory agross the screen.
+When the app is initially opened, you get a view of the splash screen saying Eventory across the screen on top of our logo.
 
 ## Welcome Screen
 <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/welcome_screen.png" height ="550"/>
 
 When you open the app after the Splash screeen, we see the Welcome Screen.
-You get the option to either login (if already a existing user) or sign up(if you are a new user)
+You get the option to either login (if already an existing user) or sign up(if you are an new user)
 
 ## Login Screen
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/login_screen.png"  height="550" />
