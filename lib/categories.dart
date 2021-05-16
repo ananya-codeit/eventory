@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
@@ -14,6 +15,7 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
          title:Text("Categories"),
@@ -29,71 +31,292 @@ class _CategoriesState extends State<Categories> {
       ),
       body: Container(
         child: Padding(
-          padding: const EdgeInsets.only(top:15),
-          child: Column(
+          padding: const EdgeInsets.all(10.0),
+          child: ListView(
             children: [
-              Container(
+              Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Row(
                   children: [
-                    Container(
-                      child: GestureDetector(
-                        onTap: (){
-                          print('true');
-                        },
-                        child: Column(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                image: DecorationImage(
-                                  image: AssetImage('images/dance.png'),
-                                  fit: BoxFit.cover,
-                                ),
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/techinal.png'),
                               ),
                             ),
-                            Center(
-                              child: Text(
-                                'Dance',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                ),
-                              ),
-                            )
-                          ],
+                            ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
                         ),
-                      ),
+                        Text(
+                          'Technical',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
                     ),
-                    Container(
-                      child: Column(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                image: AssetImage('images/technical.png'),
-                                fit: BoxFit.cover,
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/dance.png'),
                               ),
                             ),
                           ),
-                          Center(
-                            child: Text(
-                              'Technical',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 15,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Dance',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
                     ),
+
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/arts.png'),
+                              ),
+                            ),
+                          ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Arts',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/dance.png'),
+                              ),
+                            ),
+                          ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Dance',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
 
-              SizedBox(
-                height:290,
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/robotics.png'),
+                              ),
+                            ),
+                          ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Robotics',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/photography.png'),
+                              ),
+                            ),
+                          ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Photography',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/business.png'),
+                              ),
+                            ),
+                          ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Business',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          height:150,
+                          width:150,
+                          child: GestureDetector(
+                            onTap: (){
+                              print('yes');
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                image: AssetImage('images/research.png'),
+                              ),
+                            ),
+                          ),
+                          decoration:BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                        Text(
+                          'Research',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+
+                  ],
+                ),
               ),
               Container(
                 child:Row(
@@ -111,7 +334,7 @@ class _CategoriesState extends State<Categories> {
                     ),
                     GestureDetector(
                       onTap:(){
-                        print('yes');
+                        Navigator.pushNamed(context,Categories.id);
                       },
                       child: Icon(
                         Icons.list,
@@ -121,7 +344,7 @@ class _CategoriesState extends State<Categories> {
                     ),
                     GestureDetector(
                       onTap:(){
-                        Navigator.pushNamed(context, HomeScreen.id);
+                        Navigator.pushNamed(context,HomeScreen.id);
                       },
                       child: Icon(
                         Icons.home,
@@ -167,15 +390,7 @@ class _CategoriesState extends State<Categories> {
             ],
           ),
         ),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/bg.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-
       ),
-
     );
   }
 }

@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'studentprofile.dart';
 import 'welcome_screen.dart';
 import 'favourites.dart';
+import 'categories.dart';
+import 'homescreen.dart';
 
 class StudentProfileView extends StatefulWidget {
   static String id = 'student_profile_view_screen';
@@ -283,7 +285,7 @@ class _StudentProfileViewState extends State<StudentProfileView> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      print('yes');
+                      Navigator.pushNamed(context,Categories.id);
                     },
                     child: Icon(
                       Icons.list,
@@ -293,7 +295,7 @@ class _StudentProfileViewState extends State<StudentProfileView> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      print('yes');
+                      Navigator.pushNamed(context,HomeScreen.id);
                     },
                     child: Icon(
                       Icons.home,

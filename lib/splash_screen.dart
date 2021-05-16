@@ -69,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         Shadow(
                             blurRadius: 18.0,
                             color: Colors.black87,
-                            offset: Offset.fromDirection(120, 12)
+                            offset: Offset.fromDirection(90, 8)
                         )
                       ]
                   ),

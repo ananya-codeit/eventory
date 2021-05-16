@@ -291,7 +291,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   GestureDetector(
                       onTap:(){
-                      print('yes');
+                        Navigator.pushNamed(context,HomeScreen.id);
                       },
                         child: Icon(
                       Icons.home,
