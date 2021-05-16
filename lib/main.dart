@@ -20,6 +20,8 @@ import 'event_tap_info.dart';
 import 'favourites.dart';
 import 'student_profile_view.dart';
 import 'studentprofile.dart';
+import 'societyprofileedit.dart';
+import 'societyprofileview.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,6 +52,8 @@ class MyApp extends StatelessWidget {
         Favourites.id:(context)=>Favourites(),
         StudentProfileView.id:(context)=>StudentProfileView(),
         StudentProfile.id:(context)=>StudentProfile(),
+        SocietyProfileEdit.id:(context)=>SocietyProfileEdit(),
+        SocietyProfileView.id:(context)=>SocietyProfileView(),
       },
     );
   }

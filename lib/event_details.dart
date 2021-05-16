@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'event_details_two.dart';
 import 'societywelcome.dart';
+import 'societyprofileview.dart';
 
 class EventDetails extends StatefulWidget {
   static String id ='event_details';
@@ -371,7 +372,7 @@ class _EventDetailsState extends State<EventDetails> {
                   ),
                   GestureDetector(
                     onTap:(){
-                      print('yes');
+                      Navigator.pushNamed(context, SocietyProfileView.id);
                     },
                     child: Icon(
                       Icons.account_circle_outlined,

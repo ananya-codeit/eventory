@@ -284,48 +284,48 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 100,
-            ),
-            Container(
-              child:Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GestureDetector(
-                    onTap:(){
-                      Navigator.pushNamed(context, SocietyWelcome.id);
-                    },
-                    child: Icon(
-                      Icons.home,
-                      color: Colors.white,
-                      size: 40.0,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap:(){
-                      print('yes');
-                    },
-                    child: Icon(
-                      Icons.account_circle_outlined,
-                      color: Colors.white,
-                      size: 40.0,
-                    ),
-                  ),
-                ],
-              ),
-              height:70,
-              width:double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: [
-                    Color(0xFF56E3D8),
-                    Color(0xFF139CFF),
-                  ],
-                ),
-              ),
-            ),
+            // SizedBox(
+            //   height: 100,
+            // ),
+            // Container(
+            //   child:Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //     children: [
+            //       GestureDetector(
+            //         onTap:(){
+            //           Navigator.pushNamed(context, SocietyWelcome.id);
+            //         },
+            //         child: Icon(
+            //           Icons.home,
+            //           color: Colors.white,
+            //           size: 40.0,
+            //         ),
+            //       ),
+            //       GestureDetector(
+            //         onTap:(){
+            //           Navigator.pushNamed(context, SocietyWelcome.id);
+            //         },
+            //         child: Icon(
+            //           Icons.account_circle_outlined,
+            //           color: Colors.white,
+            //           size: 40.0,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            //   height:70,
+            //   width:double.infinity,
+            //   decoration: BoxDecoration(
+            //     gradient: LinearGradient(
+            //       begin: Alignment.topRight,
+            //       end: Alignment.bottomLeft,
+            //       colors: [
+            //         Color(0xFF56E3D8),
+            //         Color(0xFF139CFF),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

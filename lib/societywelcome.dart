@@ -1,7 +1,9 @@
 import 'package:eventaholic/event_details.dart';
+import 'package:eventaholic/societyprofileview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'event_details.dart';
+import 'societyprofileview.dart';
 class SocietyWelcome extends StatefulWidget {
   static String id ='society_welcome';
   @override
@@ -161,7 +163,7 @@ class _SocietyWelcomeState extends State<SocietyWelcome> {
                   ),
                   GestureDetector(
                     onTap:(){
-                      print('yes');
+                      Navigator.pushNamed(context, SocietyProfileView.id);
                     },
                     child: Icon(
                       Icons.account_circle_outlined,
