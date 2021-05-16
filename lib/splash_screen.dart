@@ -49,30 +49,48 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            // Opacity(
-            //     opacity: 0.5,
-            //     child: Image.asset('assets/img/splash screen bg.png')
-            // ),}
+            Opacity(
+                opacity: 1.0,
+                child: Image.asset('images/app_icon.png')
+            ),
 
             Shimmer.fromColors(
               period: Duration(milliseconds: 1500),
               baseColor: Color(0xffeeecec),
               highlightColor: Color(0xff525050),
               child: Container(
-                padding: EdgeInsets.only(left:35.0,top: 250.0),
-                child: Text(
-                  "Eventory",
-                  style: TextStyle(
-                      fontSize: 90.0,
-                      fontFamily: 'Mystical Snow',
-                      shadows: <Shadow>[
-                        Shadow(
-                            blurRadius: 18.0,
-                            color: Colors.black87,
-                            offset: Offset.fromDirection(90, 8)
-                        )
-                      ]
-                  ),
+                padding: EdgeInsets.only(top: 410.0),
+                child: Column(
+                  children: [
+                    Text(
+                      "Eventory",
+                      style: TextStyle(
+                          fontSize: 38.0,
+                          fontFamily: 'Mystical Snow',
+                          shadows: <Shadow>[
+                            Shadow(
+                                blurRadius: 15.0,
+                                color: Colors.black87,
+                                offset: Offset.fromDirection(90, 8)
+                            )
+                          ]
+                      ),
+                    ),
+                    // Text(
+                    //   "Event the chances",
+                    //   style: TextStyle(
+                    //       fontSize: 40.0,
+                    //       fontFamily: 'Mystical Snow',
+                    //       shadows: <Shadow>[
+                    //         Shadow(
+                    //             blurRadius: 18.0,
+                    //             color: Colors.black87,
+                    //             offset: Offset.fromDirection(90, 8)
+                    //         )
+                    //       ]
+                    //   ),
+                    // ),
+                  ],
                 ),
               ),
             )
@@ -84,6 +102,7 @@ class _SplashScreenState extends State<SplashScreen> {
         //   ),
         // ),
       ),
+
     );
   }
 
