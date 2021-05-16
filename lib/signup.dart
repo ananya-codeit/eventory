@@ -191,17 +191,20 @@ class _SignUpState extends State<SignUp> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: () async {
-                  student.add({
-                    'email': email,
-                    'name': name,
-                    'password': password,
-                    'phone': phone,
-                  }).then((value)=>print(value)).catchError((error)=>print(error));
+
 
                   try {
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if(newUser!=null){
+                      print(newUser.user.uid);
+                      student.doc(newUser.user.uid).set({
+                        'email': email,
+                        'name': name,
+                        'password': password,
+                        'phone': phone,
+                        'isStudent':true,
+                      }).then((value)=>print("data added")).catchError((error)=>print(error));
                       Navigator.pushNamed(context, HomeScreen.id);
 
                     }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 class LoginScreen extends StatefulWidget {
   static String id ='login_screen';
   @override
@@ -10,6 +11,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  CollectionReference student = FirebaseFirestore.instance.collection('student');
   final _auth = FirebaseAuth.instance;
   String email;
   String password;
@@ -129,6 +131,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     final user = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);
                     if (user != null) {
+                      student.doc(user.user.uid).get().then((value) =>{
+                        if(value.data()['isStudent']=="true")
+                          {
+
+                          }
+                      }).catchError((err)=>print(err));
                       Navigator.pushNamed(context, HomeScreen.id);
                     }
                   }
