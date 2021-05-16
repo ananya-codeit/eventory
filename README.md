@@ -1,4 +1,4 @@
-<img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/app-icon.png"  height="400" />
+<img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/app_icon_transparent.png"  height="400" />
 
 # Eventory
 This repository is for Hackowasp 3.1 
