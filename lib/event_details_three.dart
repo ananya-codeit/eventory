@@ -14,8 +14,10 @@ class EventDetailsThree extends StatefulWidget {
 
 class _EventDetailsThreeState extends State<EventDetailsThree> {
 
-
-
+  String registration;
+  String insta;
+  String twitter;
+  String linkedIn;
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +74,9 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  
+
+                  registration=value;
+
                 },
 
                 style: TextStyle(
@@ -122,7 +126,9 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                 
+
+                  insta=value;
+
                 },
 
                 style: TextStyle(
@@ -172,7 +178,9 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  
+
+                  twitter=value;
+
                 },
 
                 style: TextStyle(
@@ -222,7 +230,9 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                
+
+                  linkedIn=value;
+
                 },
 
                 style: TextStyle(

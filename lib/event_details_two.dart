@@ -11,6 +11,7 @@ class EventDetailsTwo extends StatefulWidget {
 
 class _EventDetailsTwoState extends State<EventDetailsTwo> {
 
+  String description;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,9 @@ class _EventDetailsTwoState extends State<EventDetailsTwo> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  
+
+                  description=value;
+
                 },
                 maxLines: 17,
                 style: TextStyle(
@@ -137,7 +140,7 @@ class _EventDetailsTwoState extends State<EventDetailsTwo> {
                 ),
               ),
             ),
-          
+
           ],
         ),
       ),

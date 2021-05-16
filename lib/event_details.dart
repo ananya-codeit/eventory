@@ -12,7 +12,13 @@ class EventDetails extends StatefulWidget {
 }
 
 class _EventDetailsState extends State<EventDetails> {
-  
+
+  String society;
+  String event;
+  String category;
+
+
+
   DateTime selectedDate = DateTime.now();
 
 
@@ -83,7 +89,9 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                
+
+                  society=value;
+
                 },
                 style: TextStyle(
                     color: Colors.black,
@@ -131,7 +139,9 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                 
+
+                  event=value;
+
                 },
                 style: TextStyle(
                   color: Colors.black,
@@ -290,7 +300,9 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                 
+
+                  category=value;
+
                 },
                 style: TextStyle(
                   color: Colors.black,
