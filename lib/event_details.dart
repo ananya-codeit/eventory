@@ -1,7 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'event_details_two.dart';
 import 'societywelcome.dart';
 import 'societyprofileview.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -17,13 +16,12 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
   String society;
   String name;
   String category;
-
-
-
+  String rlink;
+  String ilink;
+  String tlink;
+  String llink;
+  String description;
   DateTime selectedDate = DateTime.now();
-
-
-
   Future<void> _selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
         context: context,
@@ -38,14 +36,10 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Container(
-      
-
-        child:Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child:ListView(
           children:[
             Container(
               child: Padding(
@@ -92,9 +86,7 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-
                   society=value;
-
                 },
                 style: TextStyle(
                     color: Colors.black,
@@ -142,9 +134,7 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-
                   name=value;
-
                 },
                 style: TextStyle(
                   color: Colors.black,
@@ -203,7 +193,6 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
                         style:TextStyle(
                           fontSize:20,
                           fontWeight:FontWeight.w400,
-
                         ),
                         ),
                       ),
@@ -258,8 +247,6 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
                         style:TextStyle(
                           fontSize:20,
                           fontWeight:FontWeight.w400,
-                          
-
                         ),
                       ),
                     ),
@@ -299,15 +286,162 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
                 ),
               ),
             ),
-
-            
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+              child: TextField(
+                onChanged: (value) {
+                  category=value;
+                },
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight:FontWeight.w400,
+                  fontSize: 20.0,
+                ),
+                cursorColor: Colors.black,
+                cursorHeight: 25.0,
+                decoration: InputDecoration(
+                  contentPadding:
+                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 1.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              alignment:Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Text(
+                  'Description',
+                  textAlign:TextAlign.left,
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
 
-                  category=value;
+                  description=value;
 
+                },
+                maxLines: 17,
+                style: TextStyle(
+
+                  color: Colors.black,
+                  fontWeight:FontWeight.w400,
+                  fontSize: 20.0,
+                ),
+                cursorColor: Colors.black,
+                cursorHeight: 25.0,
+                decoration: InputDecoration(
+
+                  contentPadding:
+                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 1.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              alignment:Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Text(
+                  'Registration Link',
+                  textAlign:TextAlign.left,
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+              child: TextField(
+                onChanged: (value) {
+
+                  rlink=value;
+
+                },
+
+                style: TextStyle(
+
+                  color: Colors.black,
+                  fontWeight:FontWeight.w400,
+                  fontSize: 20.0,
+                ),
+                cursorColor: Colors.black,
+                cursorHeight: 25.0,
+                decoration: InputDecoration(
+
+                  contentPadding:
+                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 1.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              alignment:Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Text(
+                  'Instagram Handle Link',
+                  textAlign:TextAlign.left,
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+              child: TextField(
+                onChanged: (value) {
+                  ilink=value;
                 },
                 style: TextStyle(
                   color: Colors.black,
@@ -336,42 +470,149 @@ CollectionReference event = FirebaseFirestore.instance.collection('event');
                 ),
               ),
             ),
+            Container(
+              alignment:Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Text(
+                  'Twitter Handle Link',
+                  textAlign:TextAlign.left,
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+              child: TextField(
+                onChanged: (value) {
+
+                  tlink=value;
+
+                },
+
+                style: TextStyle(
+
+                  color: Colors.black,
+                  fontWeight:FontWeight.w400,
+                  fontSize: 20.0,
+                ),
+                cursorColor: Colors.black,
+                cursorHeight: 25.0,
+                decoration: InputDecoration(
+
+                  contentPadding:
+                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 1.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              alignment:Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Text(
+                  'LinkedIn Handle Link',
+                  textAlign:TextAlign.left,
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+              child: TextField(
+                onChanged: (value) {
+
+                  llink=value;
+
+                },
+
+                style: TextStyle(
+
+                  color: Colors.black,
+                  fontWeight:FontWeight.w400,
+                  fontSize: 20.0,
+                ),
+                cursorColor: Colors.black,
+                cursorHeight: 25.0,
+                decoration: InputDecoration(
+
+                  contentPadding:
+                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 1.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                    BorderSide(color: Colors.black, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                ),
+              ),
+            ),
+
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 100.0),
               child: GestureDetector(
-                onTap: (){
+                onTap: () {
+                  event.add({
+                    'name':name,
+                    'society':society,
+                    'category':category,
+                    'description':description,
+                    'rlink': rlink,
+                    'ilink': ilink,
+                    'tlink': tlink,
+                    'llink': llink,
 
-              event.add({
-                    'society': society,
-                    'name': name,
-                     'category': category,
-                  }).catchError((error)=>print(error));
-
-           
-
-                  Navigator.pushNamed(context, EventDetailsTwo.id);
+                  }).then((value)=>print(value)).catchError((error)=>print(error));
+                  Navigator.pushNamed(context, SocietyWelcome.id);
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 5),
                   height: 50,
                   width: 30,
                   decoration: BoxDecoration(
-                   
-                      gradient: LinearGradient(
-                        begin: Alignment.topRight,
-                        end: Alignment.bottomLeft,
-                        colors: [
-                          Color(0xFF56E3D8),
-                          Color(0xFF139CFF),
-                        ],
-                      ),
-                   
+
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        Color(0xFF56E3D8),
+                        Color(0xFF139CFF),
+                      ],
+                    ),
+
                     borderRadius: BorderRadius.circular(30),
 
                   ),
                   child: Center(
                     child: Text(
-                      'Next',
+                      'Submit',
                       style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 20.0,
