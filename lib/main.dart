@@ -1,4 +1,6 @@
 import 'package:eventaholic/splash_screen.dart';
+import 'package:eventaholic/student_profile_view.dart';
+import 'package:eventaholic/studentprofile.dart';
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
 import 'login.dart';
@@ -16,6 +18,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'dart:async';
 import 'event_tap_info.dart';
 import 'favourites.dart';
+import 'student_profile_view.dart';
+import 'studentprofile.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -43,6 +48,8 @@ class MyApp extends StatelessWidget {
         EventDetailsThree.id:(context)=>EventDetailsThree(),
         EventTapInfo.id:(context)=>EventTapInfo(),
         Favourites.id:(context)=>Favourites(),
+        StudentProfileView.id:(context)=>StudentProfileView(),
+        StudentProfile.id:(context)=>StudentProfile(),
       },
     );
   }

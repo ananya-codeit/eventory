@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'event_tap_info.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
+import 'student_profile_view.dart';
 class Favourites extends StatefulWidget {
   static String id ='favourites';
   @override
@@ -229,7 +230,7 @@ class _FavouritesState extends State<Favourites> {
                     ),
                     GestureDetector(
                       onTap:(){
-                        print('yes');
+                        Navigator.pushNamed(context, StudentProfileView.id);
                       },
                       child: Icon(
                         Icons.account_circle_outlined,
