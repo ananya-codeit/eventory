@@ -57,7 +57,7 @@ To view our UI/UX Design on Figma ,click [here](https://www.figma.com/file/seMw6
 
 # Tech stacks used:-
 
-<img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/pngfind.com-dart-png-1441576.png" width="70"/>      <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/figma2.png" width="70" /> <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/file_type_flutter_icon_130599.png" width="70" /> 
+<img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/pngfind.com-dart-png-1441576.png" width="70"/>      <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/figma2.png" width="70" /> <img align="center" src="https://github.com/ananya-codeit/eventory/blob/master/images/file_type_flutter_icon_130599.png" width="70" />   <img align="centre" src= "https://github.com/ananya-codeit/eventory/blob/master/images/firebase.png" width="70">
 
 # About the Developers
 <img align="centre" src="https://github.com/ananya-codeit/eventory/blob/master/images/centralperk.png" /> 
