@@ -1,6 +1,11 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'societywelcome.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'event_details.dart';
+import 'event_details_two.dart';
 class EventDetailsThree extends StatefulWidget {
   static String id ='event_details_three';
   @override
@@ -8,6 +13,10 @@ class EventDetailsThree extends StatefulWidget {
 }
 
 class _EventDetailsThreeState extends State<EventDetailsThree> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +72,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                  
                 },
 
                 style: TextStyle(
@@ -113,7 +122,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                 
                 },
 
                 style: TextStyle(
@@ -163,7 +172,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                  
                 },
 
                 style: TextStyle(
@@ -213,7 +222,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                
                 },
 
                 style: TextStyle(
@@ -248,7 +257,10 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 100.0),
               child: GestureDetector(
-                onTap: (){
+                onTap: () {
+
+
+
                   Navigator.pushNamed(context, SocietyWelcome.id);
                 },
                 child: Container(

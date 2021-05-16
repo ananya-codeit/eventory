@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'event_details_two.dart';
 import 'societywelcome.dart';
 import 'societyprofileview.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class EventDetails extends StatefulWidget {
   static String id ='event_details';
@@ -11,7 +12,10 @@ class EventDetails extends StatefulWidget {
 }
 
 class _EventDetailsState extends State<EventDetails> {
+  
   DateTime selectedDate = DateTime.now();
+
+
 
   Future<void> _selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
@@ -79,7 +83,7 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                
                 },
                 style: TextStyle(
                     color: Colors.black,
@@ -127,7 +131,7 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                 
                 },
                 style: TextStyle(
                   color: Colors.black,
@@ -241,6 +245,7 @@ class _EventDetailsState extends State<EventDetails> {
                         style:TextStyle(
                           fontSize:20,
                           fontWeight:FontWeight.w400,
+                          
 
                         ),
                       ),
@@ -285,7 +290,7 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                 
                 },
                 style: TextStyle(
                   color: Colors.black,

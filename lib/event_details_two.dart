@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'event_details_three.dart';
 import 'societywelcome.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 class EventDetailsTwo extends StatefulWidget {
   static String id ='event_details_two';
   @override
@@ -9,6 +10,8 @@ class EventDetailsTwo extends StatefulWidget {
 }
 
 class _EventDetailsTwoState extends State<EventDetailsTwo> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +67,7 @@ class _EventDetailsTwoState extends State<EventDetailsTwo> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
                 onChanged: (value) {
-                  //Do something with the user input.
+                  
                 },
                 maxLines: 17,
                 style: TextStyle(
@@ -134,48 +137,7 @@ class _EventDetailsTwoState extends State<EventDetailsTwo> {
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: 7,
-            // ),
-            // Container(
-            //   child:Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //     children: [
-            //       GestureDetector(
-            //         onTap:(){
-            //           Navigator.pushNamed(context, SocietyWelcome.id);
-            //         },
-            //         child: Icon(
-            //           Icons.home,
-            //           color: Colors.white,
-            //           size: 40.0,
-            //         ),
-            //       ),
-            //       GestureDetector(
-            //         onTap:(){
-            //           print('yes');
-            //         },
-            //         child: Icon(
-            //           Icons.account_circle_outlined,
-            //           color: Colors.white,
-            //           size: 40.0,
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            //   height:70,
-            //   width:double.infinity,
-            //   decoration: BoxDecoration(
-            //     gradient: LinearGradient(
-            //       begin: Alignment.topRight,
-            //       end: Alignment.bottomLeft,
-            //       colors: [
-            //         Color(0xFF56E3D8),
-            //         Color(0xFF139CFF),
-            //       ],
-            //     ),
-            //   ),
-            // ),
+          
           ],
         ),
       ),

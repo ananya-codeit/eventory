@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'societywelcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 class SocietySignUP extends StatefulWidget {
   static String id ='society_sign_up';
   @override
@@ -9,6 +10,7 @@ class SocietySignUP extends StatefulWidget {
 }
 
 class _SocietySignUPState extends State<SocietySignUP> {
+  CollectionReference society = FirebaseFirestore.instance.collection('society');
   final _auth=FirebaseAuth.instance;
   String name;
   String password;
@@ -182,8 +184,16 @@ class _SocietySignUPState extends State<SocietySignUP> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: () async {
+                     society.add({
+                    'email': email,
+                    'name': name,
+                    'password': password,
+                    'phone': phone,
+                  }).then((value)=>print(value)).catchError((error)=>print(error));
+
+
                   try {
-                    print(email);
+                    
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if(newUser!=null){
