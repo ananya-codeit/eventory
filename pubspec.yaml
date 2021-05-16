@@ -33,6 +33,7 @@ dependencies:
   shimmer: ^1.0.1
   firebase_core: ^1.1.1
   firebase_auth: ^1.1.4
+  date_range_picker: ^1.0.7
 
 
 
