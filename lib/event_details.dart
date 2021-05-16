@@ -1,3 +1,4 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'event_details_two.dart';
@@ -12,9 +13,9 @@ class EventDetails extends StatefulWidget {
 }
 
 class _EventDetailsState extends State<EventDetails> {
-
+CollectionReference event = FirebaseFirestore.instance.collection('event');
   String society;
-  String event;
+  String name;
   String category;
 
 
@@ -37,9 +38,11 @@ class _EventDetailsState extends State<EventDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Container(
+      
 
         child:Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -140,7 +143,7 @@ class _EventDetailsState extends State<EventDetails> {
               child: TextField(
                 onChanged: (value) {
 
-                  event=value;
+                  name=value;
 
                 },
                 style: TextStyle(
@@ -296,6 +299,8 @@ class _EventDetailsState extends State<EventDetails> {
                 ),
               ),
             ),
+
+            
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
               child: TextField(
@@ -335,6 +340,15 @@ class _EventDetailsState extends State<EventDetails> {
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: (){
+
+              event.add({
+                    'society': society,
+                    'name': name,
+                     'category': category,
+                  }).catchError((error)=>print(error));
+
+           
+
                   Navigator.pushNamed(context, EventDetailsTwo.id);
                 },
                 child: Container(
@@ -389,6 +403,9 @@ class _EventDetailsState extends State<EventDetails> {
                   ),
                   GestureDetector(
                     onTap:(){
+
+
+
                       Navigator.pushNamed(context, SocietyProfileView.id);
                     },
                     child: Icon(

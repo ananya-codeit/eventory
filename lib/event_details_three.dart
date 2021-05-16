@@ -1,23 +1,26 @@
 import 'dart:ffi';
 
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'societywelcome.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'event_details.dart';
 import 'event_details_two.dart';
+
 class EventDetailsThree extends StatefulWidget {
+  
   static String id ='event_details_three';
   @override
   _EventDetailsThreeState createState() => _EventDetailsThreeState();
 }
 
 class _EventDetailsThreeState extends State<EventDetailsThree> {
-
-  String registration;
-  String insta;
-  String twitter;
-  String linkedIn;
+CollectionReference event = FirebaseFirestore.instance.collection('event');
+  String rlink;
+  String ilink;
+  String tlink;
+  String llink;
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +78,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               child: TextField(
                 onChanged: (value) {
 
-                  registration=value;
+                  rlink=value;
 
                 },
 
@@ -127,7 +130,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               child: TextField(
                 onChanged: (value) {
 
-                  insta=value;
+                  ilink=value;
 
                 },
 
@@ -179,7 +182,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               child: TextField(
                 onChanged: (value) {
 
-                  twitter=value;
+                  tlink=value;
 
                 },
 
@@ -231,7 +234,7 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               child: TextField(
                 onChanged: (value) {
 
-                  linkedIn=value;
+                  llink=value;
 
                 },
 
@@ -268,10 +271,20 @@ class _EventDetailsThreeState extends State<EventDetailsThree> {
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: () {
+            event.add({
+                    'rlink': rlink,
+                    'ilink': ilink,
+                    'tlink': tlink,
+                    'llink': llink,
+                    
+                  }).then((value)=>print(value)).catchError((error)=>print(error));
+
+
+                Navigator.pushNamed(context, SocietyWelcome.id);
 
 
 
-                  Navigator.pushNamed(context, SocietyWelcome.id);
+
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 5),

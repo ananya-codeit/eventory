@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'event_details_three.dart';
 import 'societywelcome.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 class EventDetailsTwo extends StatefulWidget {
   static String id ='event_details_two';
   @override
@@ -10,8 +11,9 @@ class EventDetailsTwo extends StatefulWidget {
 }
 
 class _EventDetailsTwoState extends State<EventDetailsTwo> {
-
+CollectionReference event = FirebaseFirestore.instance.collection('event');
   String description;
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +107,12 @@ class _EventDetailsTwoState extends State<EventDetailsTwo> {
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: (){
+
+                      event.add({ 
+                    'description': description,
+                    
+                  });
+
                   Navigator.pushNamed(context, EventDetailsThree.id);
                 },
                 child: Container(
