@@ -1,3 +1,4 @@
+import 'package:eventaholic/societywelcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   CollectionReference student = FirebaseFirestore.instance.collection('student');
+  CollectionReference society = FirebaseFirestore.instance.collection('society');
   final _auth = FirebaseAuth.instance;
   String email;
   String password;
@@ -132,12 +134,26 @@ class _LoginScreenState extends State<LoginScreen> {
                         email: email, password: password);
                     if (user != null) {
                       student.doc(user.user.uid).get().then((value) =>{
-                        if(value.data()['isStudent']=="true")
+                        if( value.get('isStudent'))
                           {
-
+                          Navigator.pushNamed(context, HomeScreen.id)
+                          }
+                        else
+                          {
+                            Navigator.pushNamed(context, SocietyWelcome.id)
                           }
                       }).catchError((err)=>print(err));
-                      Navigator.pushNamed(context, HomeScreen.id);
+                      society.doc(user.user.uid).get().then((value) =>{
+                        if( value.get('isStudent'))
+                          {
+                            Navigator.pushNamed(context, HomeScreen.id)
+                          }
+                        else
+                          {
+                            Navigator.pushNamed(context, SocietyWelcome.id)
+                          }
+                      }).catchError((err)=>print(err));
+
                     }
                   }
                   catch(e){

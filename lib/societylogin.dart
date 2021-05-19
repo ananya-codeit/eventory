@@ -184,19 +184,18 @@ class _SocietySignUPState extends State<SocietySignUP> {
               padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
               child: GestureDetector(
                 onTap: () async {
-                     society.add({
-                    'email': email,
-                    'name': name,
-                    'password': password,
-                    'phone': phone,
-                  }).then((value)=>print(value)).catchError((error)=>print(error));
-
-
                   try {
-                    
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if(newUser!=null){
+                      society.doc(newUser.user.uid).set({
+                        'email': email,
+                        'name': name,
+                        'password': password,
+                        'phone': phone,
+                        'isStudent':false,
+                      }).then((value)=>print("society data")).catchError((error)=>print(error));
+
                       Navigator.pushNamed(context, SocietyWelcome.id);
                     }
                   }catch(e){print(e);}
